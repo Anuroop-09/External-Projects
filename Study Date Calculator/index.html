@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stud Date Calci</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="main-window">
+        <h1 id="main-heading">Study Date Calculator</h1>
+        <div id="cal-window">
+            <form class="enter-details" action="">
+                <label for="">Study date</label>
+                <p class="study-date-error error">Required *</p>
+                <input type="date" name="study-date" id="study-date">
+
+                <label for="">Age(yrs.)</label>
+                <p class="age-error error">Required *</p>
+                <input type="number" name="age" id="age">
+                
+                <label for="">Date of Birth</label>
+                <p class="dob-error error">Required *</p>
+                <input type="date" name="dob" id="dob">
+
+                <a href="#" id="submit">calculate</a>
+            </form>
+            <div id="show-output">
+                <h2 id="second-heading">Normalized Study Date Year</h2>
+                <p id="normalized-date"><span>0000</span></p>
+            </div>
+        </div>
+        <a href="#" id="reset">Reset</a>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
