@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Status Creator</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <p class="instruction">Please provide your port numbers one after another with comma(,)</p>
+    <section class="main-window d-flex">
+        <div class="input-details">
+            <form class="input-details-form d-grid" action="">
+                <div>
+                    <label class="labels" for="mind-maps">Mind Maps</label>
+                    <input class="text-input" id='mind-maps' type="text" placeholder='Enter PORT Number'>
+                </div>
+                <div>
+                    <label class="labels" for="test-cases">Test Cases</label>
+                    <input class="text-input" id='test-cases' type="text" placeholder='Enter PORT Number'>
+                </div>
+                <div>
+                    <label class="labels" for="dev">Dev Execution</label>
+                    <input class="text-input" id='dev' type="text" placeholder='Enter PORT Number'>
+                </div>
+                <div>
+                    <label class="labels" for="stage">Stage Execution</label>
+                    <input class="text-input" id='stage' type="text" placeholder='Enter PORT Number'>
+                </div>
+                <div>
+                    <label class="labels" for="raised">Tickets Raised</label>
+                    <input class="text-input" id='raised' type="text" placeholder='Enter PORT Number'>
+                </div>
+                <div>
+                    <label class="labels" for="automation">Automation</label>
+                    <input class="text-input" id='automation' type="text" placeholder='Enter Test Case Number'>
+                </div>
+                <div>
+                    <label class="labels" for="dev-team">Dev Team</label>
+                    <input class="text-input" id='dev-team' type="text" placeholder='Enter PORT Number'>
+                </div>
+                <div>
+                    <label class="labels" for="hotfix">Hotfix</label>
+                    <input class="text-input" id='hotfix' type="text" placeholder='Enter PORT Number'>
+                </div>
+                <button class="btn" id="generate">Generate Status</button>
+            </form>
+        </div>
+        <div id="show-output">
+            <h2 class="heading-secondary">Today's Update</h2>
+            <div id="show-output-items">
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
