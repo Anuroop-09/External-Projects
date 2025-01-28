@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <style>
@@ -10,31 +11,105 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: sans-serif;
-        }
-        ul {
-            list-style: none;
-            margin: 2rem;
-        }
-        li a {
-            padding: 1rem;
-            background-color:#0c8599;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #eee;
-            border-radius: 5px;
         }
 
+        html {
+            font-size: 62.5%;
+            font-family: sans-serif;
+        }
+
+        .header {
+            /*   height: 5rem; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            background-color: #9ACBD0;
+        }
+
+        .heading-primary {
+            color: #2973B2;
+            font-size: 5rem;
+        }
+
+        .nav-link:link,
+        .nav-link:visited {
+            text-decoration: none;
+            color: #2973B2;
+            font-size: 1.4rem;
+            border-bottom: 1px solid transparent;
+        }
+
+        .nav-link:hover,
+        .nav-link:active {
+            border-bottom: 1px solid #212529;
+            color: #212529;
+        }
+
+        .projects-list {
+            background-color: #F2EFE7;
+            height: 100vh;
+        }
+
+        .contanier {
+            padding: 2.4rem 4.8rem;
+        }
+
+        .heading-secondary {
+            font-size: 2rem;
+            color: #2973B2;
+            margin-bottom: 2rem;
+        }
+
+        .list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .list__item {
+            /*   justify-self: center; */
+            padding: 2rem;
+            border-radius: 5px;
+            background-color: #48A6A7;
+            text-align: center;
+        }
+
+        .list__link {
+            color: #F2EFE7;
+            text-decoration: none;
+            font-size: 1.4rem;
+        }
     </style>
 </head>
 
 <body>
-    <div>
-        <ul>
-            <li><a href="./Study Date Calculator/index.html">Study date calci</a></li>
-            <li><a href="./Daily Status Creator/index.html">Study date calci</a></li>
-        </ul>
-    </div>
+    <header class="header">
+        <h1 class="heading-primary">
+            My Projects
+        </h1>
+        <a href="https://www.linkedin.com/in/anuroop-pamarthi-b4a2b1214" class="nav-link">Contact</a>
+    </header>
+    <section class="projects-list">
+        <div class="contanier">
+            <h2 class="heading-secondary">
+                Project List
+            </h2>
+            <ul class="list">
+                <li class="list__item">
+                    <a href="./Daily Status Creator/index.html" class="list__link">
+                        VIDA &vert; DSC App
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="./Resources/index.html" class="list__link">
+                        My Resources
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 </body>
 
 </html>
