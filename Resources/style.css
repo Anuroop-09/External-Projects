@@ -12,7 +12,7 @@ html {
 /* UTILITIES */
 .d-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 
@@ -32,14 +32,20 @@ html {
 }
 
 .heading-secondary {
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 1.6rem;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
-.heading-secondary--link {
+.heading-secondary--link:link,
+.heading-secondary--link:visited {
     text-decoration: none;
     color: #2E5077;
+}
+
+.heading-secondary--link:hover,
+.heading-secondary--link:active {
+    border-bottom: 1px solid #2E5077;
 }
 
 .return-top {
@@ -123,6 +129,7 @@ html {
 }
 
 .head__title {
+    text-transform: capitalize;
     font-size: 3rem;
     font-weight: 300;
 }
@@ -133,17 +140,28 @@ html {
 }
 
 .col {
+    justify-self: center;
     flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-    gap: 1rem;
+    padding: 1.4rem 2rem;
     width: 30rem;
-    margin: 0 auto;
+    position: relative;
 }
 
 .col__main {
+    margin-bottom: 2.4rem;
     gap: 1rem;
     align-items: center;
+}
+
+.col__deprecate {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-transform: uppercase;
+    background: orangered;
+    color: #fff;
+    padding: .1rem 1rem;
+    border-radius: 100px;
 }
 
 .col__img {
@@ -154,7 +172,7 @@ html {
 }
 
 .col__text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #495057;
 }
 
