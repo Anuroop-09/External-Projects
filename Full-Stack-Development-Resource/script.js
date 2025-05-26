@@ -11,6 +11,8 @@ const appContentBox = document.querySelector('.section__apps #content__box');
 const frameworkContentBox = document.querySelector('.section__framework #content__box');
 const blogContentBox = document.querySelector('.section__blogs #content__box');
 const extensionContentBox = document.querySelector('.section__extension #content__box');
+const sectionFrontEnd = document.getElementById('front-end');
+const returnToTop = document.getElementById('return-top');
 
 // Display Data handler
 function displayData() {
@@ -55,3 +57,14 @@ function loopData (items, element, imgFolder) {
 }
 
 displayData();
+
+const returnToTopCallBack = function(entries) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) returnToTop.style.display = 'none';
+    else returnToTop.style.display = 'block';
+}
+const returnToTopObserver = new IntersectionObserver(returnToTopCallBack, {
+    root: null,
+    threshold: 0.1
+});
+returnToTopObserver.observe(sectionFrontEnd);

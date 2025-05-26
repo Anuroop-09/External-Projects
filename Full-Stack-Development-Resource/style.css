@@ -58,6 +58,7 @@ html {
     bottom: 2.5rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, .4);
     z-index: 1000;
+    display: none;
 }
 
 
