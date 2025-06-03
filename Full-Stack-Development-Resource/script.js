@@ -11,7 +11,7 @@ const appContentBox = document.querySelector('.section__apps #content__box');
 const frameworkContentBox = document.querySelector('.section__framework #content__box');
 const blogContentBox = document.querySelector('.section__blogs #content__box');
 const extensionContentBox = document.querySelector('.section__extension #content__box');
-const sectionFrontEnd = document.getElementById('front-end');
+const sectionHeader = document.getElementById('header');
 const returnToTop = document.getElementById('return-top');
 
 // Display Data handler
@@ -60,11 +60,17 @@ displayData();
 
 const returnToTopCallBack = function(entries) {
     const [entry] = entries;
-    if (!entry.isIntersecting) returnToTop.style.display = 'none';
-    else returnToTop.style.display = 'block';
+    if (!entry.isIntersecting) {
+        returnToTop.style.visibility = 'initial';
+        returnToTop.style.opacity = '1';
+    }   
+    else { 
+        returnToTop.style.visibility = 'hidden';
+        returnToTop.style.opacity = '0';
+    }
 }
 const returnToTopObserver = new IntersectionObserver(returnToTopCallBack, {
     root: null,
-    threshold: 0.1
+    threshold: 0
 });
-returnToTopObserver.observe(sectionFrontEnd);
+returnToTopObserver.observe(sectionHeader);
